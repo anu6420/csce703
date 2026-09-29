@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Login Demo</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #f4f7fb; color: #172033; margin: 0; }
+      main { max-width: 420px; margin: 8rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 28px #1b29421c; }
+      label, input, button { display: block; width: 100%; box-sizing: border-box; }
+      label { font-weight: 650; margin-top: 1rem; }
+      input { margin-top: .4rem; padding: .7rem; border: 1px solid #9aa5b5; border-radius: 6px; }
+      button { margin-top: 1.4rem; padding: .75rem; border: 0; border-radius: 6px; background: #174ea6; color: white; font-weight: 700; cursor: pointer; }
+      #status { min-height: 1.5rem; margin-top: 1rem; } .error { color: #a61b1b; } .success { color: #146c32; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Login</h1>
+      <form id="login-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128">
+        <button type="submit">Sign in</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
